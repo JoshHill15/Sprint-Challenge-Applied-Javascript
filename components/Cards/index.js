@@ -34,6 +34,8 @@
 //     .catch(err => {
 //         console.log("data not being receieved", err);
 //     })
+const article = document.querySelector(".cards-container");
+
 
     axios.get("https://lambda-times-backend.herokuapp.com/articles")
     .then(resp => {
@@ -82,9 +84,9 @@
     // })
     
     // })
-    .catch(err => {
-        console.log("data not being receieved", err);
-    })
+    // .catch(err => {
+    //     console.log("data not being receieved", err);
+    // })
 
     function articleCreator(o){
         const card = document.createElement("div");
@@ -107,8 +109,7 @@
         img.src = o.authorPhoto;
         name.textContent = o.authorName;
 
-        // article.append(card)
+        article.append(card)
 
         return card;
     }
-    const article = document.querySelector("cards-container");
