@@ -30,13 +30,29 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The dom is an interface to web pages, it starts with the html and then splits off
+into the head and body. you can manipulte the web page in ways that wouldn't be 
+possible otherwise.
+
 2. What is an event?
+
+ the event is something interactive that happens on the page, such as a click 
+or button press.
 
 3. What is an event listener?
 
+something attached to an element on the page, that runs a piece of code whenever
+that particular event occurs.
+
 4. Why would we convert a NodeList into an Array?
 
+to gain access to array methods other than forEach().
+
 5. What is a component?
+
+a dry, reusable, stand alone piece of code that can create elements when passed
+data. componenets are applied to the dom.
+
 
 ### Git Set up
 
