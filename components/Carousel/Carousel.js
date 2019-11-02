@@ -17,34 +17,38 @@
     <div class="right-button"> > </div>
   </div>
 */
-const one = document.querySelector("./assets/carousel/mountains.jpeg")
-const two = document.querySelector("./assets/carousel/computer.jpeg")
-const three = document.querySelector("./assets/carousel/trees.jpeg")
-const four = document.querySelector("./assets/carousel/turntable.jpeg")
 
-const car = document.querySelector("carousel-container");
-car.appendChild(carouselCreator());
+const carouselC = document.querySelector(".carousel-container");
 
-function carouselCreator(){
-  
+carouselC.appendChild(createCarousel());
+
+function createCarousel(){
   const carousel = document.createElement("div");
-  const leftButton = document.createElement("div");
+  const leftBtn = document.createElement("div");
   const img1 = document.createElement("img");
   const img2 = document.createElement("img");
   const img3 = document.createElement("img");
   const img4 = document.createElement("img");
-  const rightButton = document.createElement("div");
+  const rightBtn = document.createElement("div");
 
-  carousel.append(leftButton, img1, img2, img3, img4, rightButton);
+  let currentIndex = 0;
+
+  carousel.append(leftBtn, img1, img2, img3, img4, rightBtn);
+
 
   carousel.classList.add("carousel");
-  leftButton.classList.add("left-button");
-  rightButton.classList.add("right-button");
+  leftBtn.classList.add("left-button");
+  rightBtn.classList.add("right-button")
+  img1.src = "./assets/carousel/mountains.jpeg"
+  img2.src = "./assets/carousel/computer.jpeg"
+  img3.src = "./assets/carousel/trees.jpeg"
+  img4.src = "./assets/carousel/turntable.jpeg"
 
-  img1.src = one;
-  img2.src = two;
-  img3.src = three;
-  img4.src = four;
+  img1.style.display = "inline";
+  
+  leftBtn.textContent = "<"
+  rightBtn.textContent = ">"
+
 
   return carousel;
-}
+} 
